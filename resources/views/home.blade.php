@@ -18,22 +18,28 @@ Laravel Comics
 
 
 @section("contenuto")
-<section class="comics-list py-5">
+
+@include("partials.jumbotron")
+
+
+<section class="comics-list pt-5 pb-3">
 
 <div class="container wrapper">
 
 
-<div class="row row-cols-6">
+<div class="row row-cols-6 g-3">
 
     @foreach ($comics as $comic)
 
 <div class="col">
-<div class="card"style={{"height:250px"}}>
-    <div class="img-container h-75">
-        <img src={{$comic["thumb"]}} alt="" class="h-100">
+<div class="comic-card">
+    <div class="d-flex justify-content-center">
+    <div class="img-container">
+        <img src={{$comic["thumb"]}} alt="">
     </div>
-        <div class="card-body h-25">
-            {{-- <h5 class="overflow-y-hidden">{{$comic["title"]}}</h5>  --}}
+    </div>
+        <div class="card-body text-white pt-2" style={{"height:50px"}}>
+            <h5 class="text-start">{{$comic["title"]}}</h5>  
         </div>
     </div>
 </div>
@@ -43,6 +49,11 @@ Laravel Comics
 </div>
 
 </div>
+<div class="d-flex justify-content-center">
+    
+ <button class="py-1 px-5"> load more</button>
+ </div>
+       
 </section>
 
     @endsection

@@ -37,6 +37,8 @@ li {
     list-style: none;
 }
 
+// HEADER
+
 header {
     background-color: var(--color-bg-header);
     height: 70px;
@@ -48,7 +50,7 @@ header {
     font-size: x-small;
 }
 
-.header-nav a:hover {
+.header-nav a:hover:not(.header-img-container>a) {
     color: var(--color-color-navlink);
     border-bottom: 2px solid var(--color-color-navlink);
     padding-bottom: 27px;
@@ -67,11 +69,58 @@ header {
     max-width: 900px;
 }
 
+// JUMBOTRON
+
+.jumbotron {
+    height: 40vh;
+    background-image: url("../img/jumbotron.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 15%;
+    position: relative;
+
+
+}
+
+.jumbo-btn {
+    background-color: var(--color-color-navlink);
+    border: none;
+    position: absolute;
+    top: 222px;
+    font-weight: bold;
+
+}
+
+// COMICS LIST
+
 .comics-list {
     background-color: var(--color-bg-content);
 }
 
+.img-container {
+    width: 100px;
+    height: 100px;
+}
 
+div.card-body h5 {
+    font-size: x-small;
+    padding-left: 15px;
+}
+
+.comic-card {
+    cursor: pointer;
+}
+
+section.comics-list button {
+
+    background-color: var(--color-color-navlink);
+    color: white;
+    text-transform: uppercase;
+    font-size: x-small;
+    font-weight: bold;
+    border: none;
+
+}
 
 // FOOTER
 
