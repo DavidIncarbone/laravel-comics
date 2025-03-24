@@ -2,11 +2,11 @@
 
 {{-- Dichiaro le mie variabili --}}
 
-@php
+{{-- @php
     $comics = config("comics");
     // dd($comics);
     
-@endphp
+@endphp --}}
 
 @extends("layouts.master")
 
@@ -16,7 +16,7 @@
 
 @include("partials.comicsList")
 
-    @endsection
+@endsection
     
 
    

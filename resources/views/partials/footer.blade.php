@@ -14,7 +14,7 @@
   </nav>
 </div>
     <div class="footer-nav p-3">
-        <div class="container wrapper d-flex gap-5">
+        <div class="container wrapper position-relative d-flex gap-5">
         <div class="footer-nav-left ">
         <h4>DC COMICS</h4>
     <ul class=" list-group">
@@ -29,7 +29,7 @@
     
 
 
-    <h4>SHOP</h4>
+    <h4 class="mt-3">SHOP</h4>
     <ul class="list-group">
         <li><a href="">Shop DC</a></li>
     <li><a href="">Shop DC Collectibles</a></li>
@@ -63,8 +63,10 @@
     <li><a href="">DC Kids</a></li>
     <li><a href="">DC Universe</a></li>
     <li><a href="">DC Power Visa</a></li></ul>
-    </div>
-    </div>
+</div>
+<div class=" logo-container">
+<img src="{{Vite::asset("resources/img/dc-logo-bg.png")}}" alt="Logo DC">
+    </div></div>
 </div>
 
 <section class="post-footer pt-3">

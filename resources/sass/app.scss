@@ -22,12 +22,11 @@
 
 }
 
-img {
+img:not(div.img-container img) {
     width: 100%;
     height: 100%;
-
-
 }
+
 
 a {
     text-decoration: none;
@@ -50,6 +49,10 @@ header {
     font-size: x-small;
 }
 
+.active a {
+    color: var(--color-color-navlink);
+}
+
 .header-nav a:hover:not(.header-img-container>a) {
     color: var(--color-color-navlink);
     border-bottom: 2px solid var(--color-color-navlink);
@@ -66,7 +69,7 @@ header {
 }
 
 .wrapper {
-    max-width: 900px;
+    max-width: 1200px;
 }
 
 // JUMBOTRON
@@ -98,13 +101,21 @@ header {
 }
 
 .img-container {
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: 172px;
+
+    overflow-y: hidden;
+
+
+}
+
+div.img-container img {
+    width: 100%
 }
 
 div.card-body h5 {
     font-size: x-small;
-    padding-left: 15px;
+
 }
 
 .comic-card {
@@ -149,6 +160,9 @@ div.card-body h5 {
 
 .footer-nav {
     background-image: url("../img/footer-bg.jpg");
+    height: 50vh;
+    overflow: hidden;
+
 }
 
 .footer-nav h4 {
@@ -158,6 +172,14 @@ div.card-body h5 {
 .footer-nav a {
     color: var(--color-navlink-footer);
 }
+
+footer .logo-container {
+    position: absolute;
+    top: -112px;
+    right: 0;
+}
+
+
 
 .post-footer {
     background-color: var(--color-bg-footer);

@@ -2,17 +2,13 @@
 
 <div class="container wrapper">
 <div class="row row-cols-6 g-3">
+    
 
     @foreach ($comics as $comic)
 
-<x-card>
 
-<x-slot:img>
-{{$comic["thumb"]}}</x-slot>
+<x-card :comic="$comic" />
 
-<x-slot:title>{{$comic["title"]}}</x-slot>
-
-</x-card>
 
 @endforeach
 
