@@ -2,7 +2,15 @@
 
 @section("contenuto")
 
-<h1>Characters</h1>
+<x-title>
+
+<x-slot:title>Characters</x-slot>
+
+Page dedicated to the Characters
+
+</x-title>
+
+ 
 
 @endsection
 

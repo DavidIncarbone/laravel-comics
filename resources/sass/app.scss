@@ -86,7 +86,7 @@ header {
     background-color: var(--color-color-navlink);
     border: none;
     position: absolute;
-    top: 222px;
+    top: 275px;
     font-weight: bold;
 
 }
@@ -111,7 +111,8 @@ div.card-body h5 {
     cursor: pointer;
 }
 
-section.comics-list button {
+#back-btn,
+#comics-list-btn {
 
     background-color: var(--color-color-navlink);
     color: white;
