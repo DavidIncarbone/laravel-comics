@@ -1,10 +1,10 @@
+@php use Illuminate\Support\Str; @endphp; 
+
 <footer>
 
 <div class="pre-footer">
   <nav class="container wrapper py-5">
     <ul class="list-group flex-row justify-content-around">
-
-
         <li class=""><a href="" class=""><div class="pre-footer-img-container"><img src="{{Vite::asset("resources/img/buy-comics-digital-comics.png")}}" alt=""></div><div>DIGITAL COMICS</div></a></li>
         <li><a href=""><div class="pre-footer-img-container"><img src="{{Vite::asset("resources/img/buy-comics-merchandise.png")}}" alt=""></div>DC MERCHANDISE</a></li>
         <li><a href=""><div class="pre-footer-img-container"><img src="{{Vite::asset("resources/img/buy-comics-subscriptions.png")}}" alt=""></div>SUBSCRIPTION</a></li>
@@ -18,16 +18,19 @@
         <div class="footer-nav-left ">
         <h4>DC COMICS</h4>
     <ul class=" list-group">
-    <li><a href="">Characters</a></li>
-    <li><a href="">Comics</a></li>
-    <li><a href="">Movies</a></li>
-    <li><a href="">TV</a></li>
-    <li><a href="">Games</a></li>
-    <li><a href="">Videos</a></li>
-    <li><a href="">News</a></li></ul>
+       @php $footerLinks = array_splice($routes,0,count($routes) - 1);
+        
+        // var_dump($footerLinks);
+        @endphp
 
+        @foreach ($footerLinks as $footerLink)
+        
+    <li>
+        <a href="{{$footerLink}}">{{ ucfirst($footerLink) }}</a>
+    </li>
+    @endforeach
+    </ul>
     
-
 
     <h4 class="mt-3">SHOP</h4>
     <ul class="list-group">
@@ -78,11 +81,11 @@
         <h4>FOLLOW US</h4>
         <nav>
        <ul class="d-flex gap-2">
-        <li><a href=""><img src="{{Vite::asset("resources/img/footer-facebook.png")}}" alt=""></a></li>
-        <li><a href=""><img src="{{Vite::asset("resources/img/footer-twitter.png")}}" alt=""></a></li>
-        <li><a href=""><img src="{{Vite::asset("resources/img/footer-youtube.png")}}" alt=""></a></li>
-        <li><a href=""><img src="{{Vite::asset("resources/img/footer-pinterest.png")}}" alt=""></a></li>
-        <li><a href=""><img src="{{Vite::asset("resources/img/footer-periscope.png")}}" alt=""></a></li>
+        <li><a href=""><img src="{{Vite::asset("resources/img/footer-facebook.png")}}" alt="footer-facebook"></a></li>
+        <li><a href=""><img src="{{Vite::asset("resources/img/footer-twitter.png")}}" alt="footer-twitter"></a></li>
+        <li><a href=""><img src="{{Vite::asset("resources/img/footer-youtube.png")}}" alt="footer-youtube"></a></li>
+        <li><a href=""><img src="{{Vite::asset("resources/img/footer-pinterest.png")}}" alt="footer-pinterest"></a></li>
+        <li><a href=""><img src="{{Vite::asset("resources/img/footer-periscope.png")}}" alt="footer-periscope"></a></li>
       
        </ul>
         </nav>
